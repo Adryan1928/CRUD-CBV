@@ -13,7 +13,7 @@
         <section>
             <ul>
                 {% for cliente in object_list %}
-                 <li>{{cliente}}</li>
+                 <li>{{cliente}} - <a href="{% url 'exemplo:detail' cliente.id %}">Detalhes</a> - <a href="{% url 'exemplo:update' cliente.id %}">Editar</a> - <a href="{% url 'exemplo:delete' cliente.id %}">Apagar</a></li>
                 {% endfor %}
             </ul>
         </section>

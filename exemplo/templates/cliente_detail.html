@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do cliente</title>
+</head>
+<body>
+    <header>
+        <h1>Detalhes do cliente</h1>
+    </header>
+    <main>
+        <section>
+            <p>Nome: {{object}}</p>
+            <p>Idade: {{object.age}}</p>
+        </section>
+        <section>
+            <input type="submit" value="Voltar" onclick="location.href = '{% url 'exemplo:list' %}'" >
+        </section>
+    </main>
+</body>
+</html>

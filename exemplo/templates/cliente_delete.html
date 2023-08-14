@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apagar cliente</title>
+</head>
+<body>
+    <header>
+        <h1>Tem certeza que quer apagar o cliente {{object}}?</h1>
+    </header>
+    <main>
+        <form action="." method="post" >{% csrf_token %}
+            <input type="submit" value="Sim">
+            <input type="reset" value="Não" onclick="location.href = '{% url 'exemplo:list' %}'" >
+        </form>
+    </main>
+</body>
+</html>

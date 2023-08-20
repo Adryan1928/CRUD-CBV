@@ -8,6 +8,7 @@
 <body>
     <header>
         <h1>Lista de clientes</h1>
+        <p>Olá, {{request.user}}</p>
     </header>
     <main>
         <section>
@@ -19,6 +20,7 @@
         </section>
         <section>
             <button onclick="location.href = '{% url 'exemplo:create' %}'" >Cadastrar cliente</button>
+            <button onclick="location.href = '{% url 'logout' %}'" >Sair</button>
         </section>
     </main>
 </body>

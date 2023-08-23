@@ -12,7 +12,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', view=TemplateView.as_view(template_name='home.html'), name='home'),
     path('clientes/', include('exemplo.urls')),
-    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/', include('users.urls')),
     path('token/', TokenObtainPairView.as_view()),
     path('token/refresh/', TokenRefreshView.as_view())
 ] + [path('api/', include(router.urls))]

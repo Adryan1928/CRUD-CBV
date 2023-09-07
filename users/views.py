@@ -1,7 +1,5 @@
-from typing import Any
-from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render, redirect
-from django.views.generic import CreateView
+from django.views.generic import DetailView
 from django.contrib.auth.models import User
 from django.urls import reverse_lazy
 
@@ -27,3 +25,7 @@ def RegisterUserView(request):
         user.save()
 
         return redirect('/accounts/login/')
+
+class userDetailView(DetailView):
+    model = User
+    template_name = 'detail.html'

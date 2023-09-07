@@ -8,13 +8,15 @@
 <body>
     <header>
         <h1>Lista de clientes</h1>
-        <p>Olá, {{request.user}}</p>
+        <p>Olá, <a href="{% url 'detail' user_id %}">{{request.user}}</a></p>
     </header>
     <main>
         <section>
             <ul>
                 {% for cliente in object_list %}
-                 <li>{{cliente}} - <a href="{% url 'exemplo:detail' cliente.id %}">Detalhes</a> - <a href="{% url 'exemplo:update' cliente.id %}">Editar</a> - <a href="{% url 'exemplo:delete' cliente.id %}">Apagar</a></li>
+                    {% if user_id == cliente.user.id %}
+                        <li>{{cliente}} - <a href="{% url 'exemplo:detail' cliente.id %}">Detalhes</a> - <a href="{% url 'exemplo:update' cliente.id %}">Editar</a> - <a href="{% url 'exemplo:delete' cliente.id %}">Apagar</a></li>
+                    {% endif %}
                 {% endfor %}
             </ul>
         </section>

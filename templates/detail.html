@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do usuário</title>
+</head>
+<body>
+    <header>
+        <h1>Olá, {{object}}</h1>
+    </header>
+    <main>
+        <p>testes</p>
+        <p>{{object.clientes.all}}</p>
+        <a href="{% url 'exemplo:list' %}">Voltar</a>
+    </main>
+</body>
+</html>
